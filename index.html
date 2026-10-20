@@ -607,13 +607,24 @@
       }
 
       function openTour() {
+        var ratingOverlay = document.getElementById("rating-overlay");
+        if (ratingOverlay) {
+          ratingOverlay.classList.remove("show");
+          ratingOverlay.style.display = "none";
+        }
+        overlay.style.display = "flex";
         showStep(0);
         overlay.classList.add("show");
       }
 
       function closeTour() {
         overlay.classList.remove("show");
+        overlay.style.display = "none";
       }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeTour();
+      });
 
       if (fab) fab.addEventListener("click", openTour);
       if (closeBtn) closeBtn.addEventListener("click", closeTour);
