@@ -104407,7 +104407,7 @@ $0(){var s=this.a
 return s.S(new A.aEv(s))},
 $S:0}
 A.aEv.prototype={
-$0(){return this.a.w=1},
+$0(){if(typeof window!=="undefined"&&window.__onPassengerTabChange)window.__onPassengerTabChange(1);return this.a.w=1},
 $S:0}
 A.aEz.prototype={
 $0(){return A.dS(this.a,!1).jw(A.TI(new A.aEu(),null,t.z))},
@@ -104420,7 +104420,7 @@ $1(a){var s=this.a
 return s.S(new A.aEt(s,a))},
 $S:27}
 A.aEt.prototype={
-$0(){return this.a.w=this.b},
+$0(){var b=this.b;if(typeof window!=="undefined"&&window.__onPassengerTabChange)window.__onPassengerTabChange(b);return this.a.w=b},
 $S:0}
 A.QJ.prototype={
 H(a){var s=null,r=this.c
